@@ -1,0 +1,32 @@
+@import url('./skeleton.css');
+@import url('./loader.css');
+@import url('./component.css');
+* {
+  transition: 0.15s;
+}
+em {
+  padding: 1em;
+  opacity: 75%;
+}
+.center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100vw;
+}
+#firstTime {
+  position: relative;
+  top: 20%;
+}
+#login {
+  display: grid;
+  justify-content: center;
+  transform: translateX(-1em);
+}
+select {
+  width: 80vw;
+}
+
+#loading {
+  transform: translateY(10em);
+}
