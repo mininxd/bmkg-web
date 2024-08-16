@@ -14,7 +14,13 @@ fetch('https://api.mininxd.my.id/bmkg/area/prov')
       inputProv.appendChild(option);
     }
   })
-  .catch(e => console.error(e));
+  .catch(e => {
+    loading.style.display = "none";
+    login.style.display = "block";
+    infoData.innerHTML = 'Gagal mengambil data provinsi <a id="refresh">refresh</a>';
+    infoData.classList.add('danger');
+    console.error(e)
+  })
 
 // Event listener untuk input provinsi
 inputProv.addEventListener('input', async function() {
@@ -94,7 +100,8 @@ submitLokasi.addEventListener('click', function() {
   localStorage.setItem('areaID',`{
     "prov":"${inputProv.value}",
     "kab":"${inputKab.value}",
-    "kec":"${inputKec.value}"
+    "kec":"${inputKec.value}",
+    "API_URL":"https://api.mininxd.my.id/bmkg/weather/${inputProv.value}/${inputKab.value}/${inputKec.value}"
   }`)
   window.location.reload();
 })

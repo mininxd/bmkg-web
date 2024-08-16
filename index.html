@@ -2,6 +2,11 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+ <!--   
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"> 
+-->
     <script type="module" src="./js/script.js"></script>
   </head>
   <body>
@@ -34,8 +39,100 @@
   </div>
   
   <div style="display:none" id="content" class="content">
-    <p id="output"></p>
+    
+<section class="hero">
+  <div class="hero-heading">
+    <h1>Cuaca saat ini</h1>
+    <span id="kecKabText"></span>
+  </div>
+  <div class="hero-content">
+    <div class="item">
+    <h1  id="temp"></h1>
+    <span id="weather"></span>
+    </div>
+    <div class="item">
+    <div id="weatherIcon"></div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-heading">
+    <h1>Detail Cuaca</h1>
+  </div>
+  <div class="hero-content">
+    <div class="item">
+    <span>Kelembaban</span>
+    </div> <!--left-->
+    <div class="item">
+    <span id="humidity"></span>
+    </div> <!--right-->
+
+    <div class="item">
+    <span>Arah Angin</span>
+    </div>
+    <div class="item">
+    <span id="windDirection"></span>
+    </div>
+
+    <div class="item">
+    <span>Kecepatan Angin</span>
+    </div>
+    <div class="item">
+    <span id="windSpeed"></span>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-heading">
+    <h1>Prakiraan Cuaca</h1>
+    <span>GMT+7 | Waktu Indonesia Barat</span>
+  </div>
+  <div class="hero-content">
+    <div id="prakiraan" class="item-mendatar">
+    </div> 
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-heading">
+    <h1>Gambar </h1>
+  </div>
+  <div class="hero-content">
+    <div id="images">
+    </div> 
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-heading">
+    <h1>JSON </h1>
+  </div>
+  <div class="hero-content">
+    <div class="jsonWrapper">
+     <span id="apiUrl"></span>
+      <textarea id="jsonEl" readonly=""></textarea>
+    </div>
+  </div>
+</section>
+
+
+<div class="footer">
+<span>Made With</span>
+<br>
+<a class="a" target="_blank" href="https://vitejs.dev">
+<img width="32px" src="./assets/vite.svg">
+</a>
+<a class="a" target="_blank" href="https://getskeleton.com">
+<img height="32px" src="./assets/feather.svg">
+</a>
+</div>
+<div class="bottom-button">
+  <button class="button btn-primary" id="donate">Saweria</button>
+  <button class="button btn-primary" id="github">Github</button>
   <button class="btn-danger" id="reset">reset data</button>
+</div>
   </div>
   </body>
 </html>

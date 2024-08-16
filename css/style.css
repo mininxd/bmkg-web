@@ -1,6 +1,7 @@
 @import url('./skeleton.css');
 @import url('./loader.css');
 @import url('./component.css');
+@import url('./weatherUI.css');
 * {
   transition: 0.15s;
 }
@@ -29,4 +30,11 @@ select {
 
 #loading {
   transform: translateY(10em);
+}
+#content {
+  padding: 0.5em;
+}
+.right {
+  display: flex;
+  justify-content: flex-end;
 }

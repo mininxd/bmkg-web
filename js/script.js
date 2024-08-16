@@ -14,7 +14,12 @@ fetch(url).then(res => {
 }).catch(e => {console.log(e)})
 
 */
-
+donate.addEventListener("click", function() {
+  window.open("https://saweria.co/mininxd");
+})
+github.addEventListener("click", function() {
+  window.open("https://github.com/ka-shifuka/BMKG-scraper");
+})
 reset.addEventListener("click", function()  {
   localStorage.removeItem('areaID')
   window.location.reload();

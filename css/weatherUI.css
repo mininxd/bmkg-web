@@ -1,0 +1,89 @@
+section {
+  margin-top: 1em;
+}
+.hero {
+  /* font-family: "DM Sans", Sans-Serif; */
+  color: #222;
+  border: 1px solid #2229;
+  border-radius: 5px;
+  padding: 1em;
+}
+.hero-heading {
+  margin-bottom: 3.5em;
+}
+.hero-heading > h1, .hero-content .item > h1 {
+  /* font-weight: 600; */
+  line-height:8px;
+  margin-top: 0.5em;
+}
+.hero-heading > span {
+  opacity: 0.75;
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item {
+  width: 35vw;
+}
+.hero-content .item:nth-child(odd) {
+  text-align: left;
+  margin: 2px 0 2px 0;
+}
+.hero-content .item:nth-child(even) {
+  text-align: right;
+  margin: 2px 0 2px 0;
+}
+#images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#images > img {
+  max-width: 84vw;
+  margin-top: 10px;
+  border: 2px #222 solid;
+}
+
+#prakiraan {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+#prakiraan > .prakiraanWrapper {
+  padding: 2px;
+  text-align: center;
+  margin: 0 2px 0 2px;
+}
+
+textarea {
+  width: 85vw;
+  height: 300px;
+  resize: none;
+}
+.jsonWrapper {
+  display: block;
+}
+#apiUrl {
+  font-size: 10px;
+  word-wrap: break-word;
+  opacity: 0.6;
+  font-style: oblique;
+}
+
+.footer {
+  display: block;
+  text-align: center;
+  margin: 5em 0 3em 0;
+  color: #222;
+}
+.footer img {
+  margin: 10px 5px 0 5px;
+}
+.bottom-button {
+  display: flex;
+  justify-content: space-between;
+}
