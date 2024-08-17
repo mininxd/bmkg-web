@@ -74,3 +74,25 @@ button {
     opacity: 1;
   }
 }
+
+
+.desktop {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+#content .desktop {
+  padding: 10em;
+}
+.desktop .hero {
+ width: auto;
+}
+.desktop .hero:nth-child(-n2) {
+ height: 200px;
+}
+.desktop .hero textarea {
+  width: 48vw;
+}
+.desktop .hero #images img {
+  max-width: 75px;
+}

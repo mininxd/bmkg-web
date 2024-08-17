@@ -38,7 +38,16 @@ for(var i=0; i < data.images.length; i++) {
 
 
 // Prakiraan Cuaca
-for(var j=0; j < 7; j++) {
+let UA = navigator.userAgent; 
+let regexp = /android|iphone|kindle|ipad/i; 
+let mobile = regexp.test(UA); 
+var j, k;
+if(mobile == true) {
+  k = 7;
+} else {
+  k = 10;
+}
+for(j=0; j < k; j++) {
 let time = data.dataWeather[j].time.replaceAll("WIB","");
 let weather = data.dataWeather[j].weather;
 

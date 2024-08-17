@@ -24,3 +24,13 @@ reset.addEventListener("click", function()  {
   localStorage.removeItem('areaID')
   window.location.reload();
 })
+
+
+
+let details = navigator.userAgent; 
+let regexp = /android|iphone|kindle|ipad/i; 
+let isMobileDevice = regexp.test(details); 
+
+if (isMobileDevice == false) { 
+    content.classList.add("desktop");
+}

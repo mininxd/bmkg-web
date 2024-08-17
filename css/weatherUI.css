@@ -20,12 +20,13 @@ section {
   opacity: 0.75;
 }
 .hero-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: start end;
+  grid-template-columns: repeat(2, 1fr);
 }
 .item {
-  width: 35vw;
+  width: auto;
+  font-size: inherit;
 }
 .hero-content .item:nth-child(odd) {
   text-align: left;
@@ -85,5 +86,6 @@ textarea {
 }
 .bottom-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 1em;
 }
