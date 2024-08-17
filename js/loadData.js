@@ -38,7 +38,7 @@ for(var i=0; i < data.images.length; i++) {
 
 
 // Prakiraan Cuaca
-for(var j=0; j < data.dataWeather.length; j++) {
+for(var j=0; j < 7; j++) {
 let time = data.dataWeather[j].time.replaceAll("WIB","");
 let weather = data.dataWeather[j].weather;
 
