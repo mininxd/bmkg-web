@@ -38,25 +38,21 @@ for(var i=0; i < data.images.length; i++) {
 
 
 // Prakiraan Cuaca
-let UA = navigator.userAgent; 
-let regexp = /android|iphone|kindle|ipad/i; 
-let mobile = regexp.test(UA); 
-var j, k;
-if(mobile == true) {
-  k = 7;
-} else {
-  k = 10;
-}
+const UA = navigator.userAgent;
+const isMobile = /android|iphone|kindle|ipad/i.test(UA);
+let j;
+const k = isMobile ? Math.min(7, data.dataWeather.length) : Math.min(10, data.dataWeather.length);
+
 for(j=0; j < k; j++) {
 let times = data.dataWeather[j].time;
 if(times.includes("WIB")) {
-  gmt.innerHTML = '+7'
+  gmt.innerHTML = 'GMT +7'
   timeZone.innerHTML = 'Waktu Indonesia Barat'
 } else if(times.includes("WITA")) {
-  gmt.innerHTML = '+8'
+  gmt.innerHTML = 'GMT +8'
   timeZone.innerHTML = 'Waktu Indonesia Tengah'
 } else if(times.includes("WIT")) {
-  gmt.innerHTML = '+9'
+  gmt.innerHTML = 'GMT +9'
   timeZone.innerHTML = 'Waktu Indonesia Timur'
 }
 
