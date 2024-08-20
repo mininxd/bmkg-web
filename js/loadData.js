@@ -48,25 +48,28 @@ if(mobile == true) {
   k = 10;
 }
 for(j=0; j < k; j++) {
-let timeZ = data.dataWeather[j].time;
-if(timeZ.includes("WIB")) {
+let times = data.dataWeather[j].time;
+if(times.includes("WIB")) {
   gmt.innerHTML = '+7'
   timeZone.innerHTML = 'Waktu Indonesia Barat'
-} else if(timeZ.includes("WITA")) {
+} else if(times.includes("WITA")) {
   gmt.innerHTML = '+8'
   timeZone.innerHTML = 'Waktu Indonesia Tengah'
-} else if(timeZ.includes("WIT")) {
+} else if(times.includes("WIT")) {
   gmt.innerHTML = '+9'
   timeZone.innerHTML = 'Waktu Indonesia Timur'
 }
-let time = data.dataWeather[j].time.replaceAll("WIB","").replaceAll("WITA","").replaceAll("WIT","");
+
+
+
 let weather = data.dataWeather[j].weather;
 
 let div = document.createElement('div');
 let span = document.createElement('span');
 let iconEl = document.createElement('div');
 
-span.textContent = time;
+let jam = times.replaceAll("WIB","").replaceAll("WITA","").replaceAll("WIT","");
+span.textContent = jam;
 
  if (weather.includes('Cerah Berawan')) {
     iconEl.innerHTML = icon.CloudSunIconSmall();
@@ -82,6 +85,9 @@ span.textContent = time;
   } 
   else if(weather.includes('Gerimis')) {
     iconEl.innerHTML = icon.CloudDrizzleIconSmall();
+  }
+  else if(weather.includes('Udara Kabur')) {
+    iconEl.innerHTML = icon.CloudFogIconSmall();
   }
 
 
@@ -107,6 +113,9 @@ prakiraan.append(div);
   } 
   else if(data.weatherNow.weather.includes('Gerimis')) {
     weatherIcon.innerHTML = icon.CloudDrizzleIcon();
+  }
+  else if(data.weatherNow.weather.includes('Udara Kabur')) {
+    weatherIcon.innerHTML = icon.CloudFogIcon();
   }
   
   

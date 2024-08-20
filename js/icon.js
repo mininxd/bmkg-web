@@ -153,6 +153,7 @@ export function SunMediumIconSmall() {
 
   
 }
+
 export function CloudIcon() {
   return `
     <svg
@@ -189,6 +190,46 @@ export function CloudIconSmall() {
     </svg>
   `
 }
+
+export function CloudFogIcon() {
+  return `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+      <path d="M16 17H7" />
+      <path d="M17 21H9" />
+    </svg>
+  `
+}
+export function CloudFogIconSmall() {
+  return `
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+      <path d="M16 17H7" />
+      <path d="M17 21H9" />
+    </svg>
+  `
+}
+
 
 export function CloudRainIcon() {
   return `
