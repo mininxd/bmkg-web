@@ -48,7 +48,18 @@ if(mobile == true) {
   k = 10;
 }
 for(j=0; j < k; j++) {
-let time = data.dataWeather[j].time.replaceAll("WIB","");
+let timeZ = data.dataWeather[j].time;
+if(timeZ.includes("WIB")) {
+  gmt.innerHTML = '+7'
+  timeZone.innerHTML = 'Waktu Indonesia Barat'
+} else if(timeZ.includes("WITA")) {
+  gmt.innerHTML = '+8'
+  timeZone.innerHTML = 'Waktu Indonesia Tengah'
+} else if(timeZ.includes("WIT")) {
+  gmt.innerHTML = '+9'
+  timeZone.innerHTML = 'Waktu Indonesia Timur'
+}
+let time = data.dataWeather[j].time.replaceAll("WIB","").replaceAll("WITA","").replaceAll("WIT","");
 let weather = data.dataWeather[j].weather;
 
 let div = document.createElement('div');
