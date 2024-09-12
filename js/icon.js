@@ -48,6 +48,7 @@ export function CloudSunIconSmall() {
     </svg>
   `
 }
+
 export function SunIcon() {
   return `
     <svg
@@ -230,7 +231,6 @@ export function CloudFogIconSmall() {
   `
 }
 
-
 export function CloudRainIcon() {
   return `
     <svg
@@ -386,7 +386,6 @@ export function CloudMoonRainIcon() {
 export function CloudMoonRainIconSmall() {
   return `
     <svg
-
  xmlns="http://www.w3.org/2000/svg"
   width="32" 
   height="32" 
@@ -402,5 +401,114 @@ export function CloudMoonRainIconSmall() {
  <path d="M11 20v2" />
  <path d="M7 19v2" />
     </svg>
+  `
+}
+
+export function HeavyCloudIcon() {
+  return `
+    <svg
+ xmlns="http://www.w3.org/2000/svg"
+  width="64" 
+  height="64" 
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ strokeWidth="2"
+ strokeLinecap="round"
+ strokeLinejoin="round"
+    >
+      <path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+      <path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5" />
+    </svg>`
+}
+export function HeavyCloudIconSmall() {
+  return `
+    <svg
+ xmlns="http://www.w3.org/2000/svg"
+  width="30" 
+  height="30" 
+ viewBox="0 0 24 24"
+ fill="none"
+ stroke="currentColor"
+ strokeWidth="2"
+ strokeLinecap="round"
+ strokeLinejoin="round"
+    >
+      <path d="M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+      <path d="M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5" />
+    </svg>`
+}
+
+export function WindIcon() {
+  return `  <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+    </svg>
+  `
+}
+export function WindIconSmall() {
+  return `  <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2" />
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+    </svg>
+  `
+}
+
+export function FogIcon() {
+  return `  <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="64"
+      height="64"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+    <path d="M20 10H5" />
+    <path d="M25 14H8" />
+    <path d="M20 18H5" />
+    </svg>
+  `
+}
+export function FogIconSmall() {
+  return `  <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+    <path d="M20 10H5" />
+    <path d="M25 14H8" />
+    <path d="M20 18H5" />
+   </svg>
   `
 }

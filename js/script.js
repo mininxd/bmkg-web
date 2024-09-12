@@ -1,4 +1,5 @@
 import './areaData.js'
+import './iconList.js'
 import './loadData.js'
 /*
 let prov = 'jawaTengah';

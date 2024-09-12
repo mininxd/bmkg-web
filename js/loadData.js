@@ -46,13 +46,13 @@ const k = isMobile ? Math.min(7, data.dataWeather.length) : Math.min(10, data.da
 for(j=0; j < k; j++) {
 let times = data.dataWeather[j].time;
 if(times.includes("WIB")) {
-  gmt.innerHTML = 'GMT +7'
+  gmt.innerHTML = 'GMT +7 | '
   timeZone.innerHTML = 'Waktu Indonesia Barat'
 } else if(times.includes("WITA")) {
-  gmt.innerHTML = 'GMT +8'
+  gmt.innerHTML = 'GMT +8 | '
   timeZone.innerHTML = 'Waktu Indonesia Tengah'
 } else if(times.includes("WIT")) {
-  gmt.innerHTML = 'GMT +9'
+  gmt.innerHTML = 'GMT +9 | '
   timeZone.innerHTML = 'Waktu Indonesia Timur'
 }
 
@@ -73,6 +73,9 @@ span.textContent = jam;
   else if(weather.includes('Cerah')) {
     iconEl.innerHTML = icon.SunIconSmall();
   }
+  else if(weather.includes('Berawan Tebal')) {
+    iconEl.innerHTML = icon.HeavyCloudIconSmall();
+  } 
   else if(weather.includes('Berawan')) {
     iconEl.innerHTML = icon.CloudIconSmall();
   } 
@@ -84,6 +87,12 @@ span.textContent = jam;
   }
   else if(weather.includes('Udara Kabur')) {
     iconEl.innerHTML = icon.CloudFogIconSmall();
+  }
+  else if(weather.includes('Berangin')) {
+    iconEl.innerHTML = icon.WindIconSmall();
+  }
+  else if(weather.includes('Kabut')) {
+    iconEl.innerHTML = icon.FogIconSmall();
   }
 
 
@@ -101,6 +110,9 @@ prakiraan.append(div);
   else if(data.weatherNow.weather.includes('Cerah')) {
     weatherIcon.innerHTML = icon.SunIcon();
   }
+  else if(data.weatherNow.weather.includes('Berawan Tebal')) {
+    weatherIcon.innerHTML = icon.HeavyCloudIcon();
+  }
   else if(data.weatherNow.weather.includes('Berawan')) {
     weatherIcon.innerHTML = icon.CloudIcon();
   } 
@@ -113,8 +125,14 @@ prakiraan.append(div);
   else if(data.weatherNow.weather.includes('Udara Kabur')) {
     weatherIcon.innerHTML = icon.CloudFogIcon();
   }
+  else if(data.weatherNow.weather.includes('Berangin')) {
+    weatherIcon.innerHTML = icon.WindIcon();
+  }
+  else if(data.weatherNow.weather.includes('Kabut')) {
+    weatherIcon.innerHTML = icon.FogIcon();
+  }
   
-  
+
   
 
 jsonEl.value = JSON.stringify(data, null, 2)
